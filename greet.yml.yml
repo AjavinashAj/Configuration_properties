@@ -1,0 +1,37 @@
+#server:
+#  port: 9091
+
+#backend api run on port no
+
+  
+#for eureka server registering with backend api ,if eureka server port no is 8761 then don't need to write code here because automatically eureka server register with backend api
+#if port no different then need to write code in application.properties file
+#eureka:
+ # client:
+  #  service-url:
+  #    defaultZone: http://localhost:2222/eureka
+
+
+#for admin server registration with backend api
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+#for application name        
+  application:
+    name: GREET-API
+        
+        
+#for enabling actuator end point
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
+
+                
+        
